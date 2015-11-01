@@ -1,13 +1,46 @@
 #!/bin/bash
+#
+# Start git in docker and use it like a installed binary.
 
+function errexit() {
+  echo "$@" >&2
+  exit 1
+}
+
+# Check if necessary ENV variables are set or exit with errormessage.
 if [ -z "$GIT_EMAIL" ] || [ -z "$GIT_NAME" ]; then
-	echo "Please provide environment variable \"GIT_NAME\" and \"GIT_EMAIL\"."
+	errexit "Please provide environment variable \"GIT_NAME\" and \"GIT_EMAIL\"."
 fi;
 
+# Find the root of the current git-repo, you are inside.
+#
+# Custom implementation, because "git rev-parse --show-toplevel"
+# does not work without installed git. And we should not expect
+# user has git installed.
+function setgitroot() {
+
+  # Exit, if in root directory
+  if [ $(pwd) == "/" ]; then
+    errexit "fatal: Not a git repository (or any of the parent directories): .git"
+  fi;
+
+  # Set GIT_ROOT, if ".git"-directory exists,
+  # otherwise try again in parent directory.
+  if [ ! -d ".git" ]; then
+    cd ..
+    setgitroot
+  else
+    GIT_ROOT=$(pwd)
+  fi;
+}
+
+setgitroot
+
+# Run git in docker if all prerequisites are met.
 docker run -it \
 	-e "GIT_COMMITTER_NAME=$GIT_NAME" \
 	-e "GIT_AUTHOR_NAME=$GIT_NAME" \
 	-e "GIT_COMMITTER_EMAIL=$GIT_EMAIL" \
 	-e "GIT_AUTHOR_EMAIL=$GIT_EMAIL" \
-	-v $(pwd):/root/workspace \
+	-v $GIT_ROOT:/root/workspace \
 	axeclbr/git "$@"
