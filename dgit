@@ -10,4 +10,4 @@ docker run -it \
 	-e "GIT_COMMITTER_EMAIL=$GIT_EMAIL" \
 	-e "GIT_AUTHOR_EMAIL=$GIT_EMAIL" \
 	-v $(pwd):/root/workspace \
-	axeclbr/git $@
+	axeclbr/git "$@"
