@@ -34,11 +34,11 @@ function set_need_existing_repo() {
   # Default: Expect, that the git-command needs to be
   # performed inside of an existing git repository.
   NEEDS_REPO=true
-  local array=("init" "clone")
-  for element in ${array[@]}; do
+  local non_repo_args=("init" "clone")
+  for element in ${non_repo_args[@]}; do
+    # if at least one argument is given and is in non_repo_args
+    # then the command does not need an existing git repository.
     if [ ! -z ${1+x} ] && [ "$element" == "$1" ]; then
-      # if at least one argument is given and is contained by the array
-      # then the command does not need an existing git repository.
       NEEDS_REPO=false
     fi;
   done;
