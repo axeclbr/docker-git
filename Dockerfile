@@ -10,6 +10,10 @@ RUN \
 
 ENV HOME /root
 
+# Put convienience-script into container to have it accessible
+# without checking out from github-repo
+COPY git /root/git
+
 VOLUME /root/workspace
 
 WORKDIR /root/workspace

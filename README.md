@@ -6,16 +6,18 @@ Written for my personal private own use only. Comes without any guarantees.
 
 ## Usage
 
-Make the file ``dgit`` accessible in your ``PATH``, e.g.:
+The container contains a helper script for convienient usage. Just print it out and make it accessible in your ``PATH`` and executable like this.
 
-    $ ln -s $(pwd)/dgit $HOME/bin/dgit
+    $ docker run --entrypoint=/bin/cat axeclbr/git /root/git > $HOME/bin/dgit && chmod +x $HOME/bin/dgit
 
 To check if it works it makes sense to just ask for the git version by typing:
 
     $ dgit --version
     git version 2.1.4
 
-Now you can start using dgit just like a local git installation.
+If you want to use another name just change it from ``dgit`` to your desired name.
+
+Now you can start using ``dgit`` just like a local git installation.
 
 ## Debugging
 
