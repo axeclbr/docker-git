@@ -45,4 +45,4 @@ VOLUME /root/workspace
 
 WORKDIR /root/workspace
 
-ENTRYPOINT ["/usr/bin/git"]
+ENTRYPOINT ["/usr/local/bin/git"]
