@@ -26,11 +26,8 @@ RUN \
       apt-get -y remove \
         build-essential \
         gettext \
-        libcurl4-gnutls-dev \
-        libexpat1-dev \
-        libssl-dev \
-        libz-dev \
         wget && \
+      apt-get -y install less && \
       apt-get -y autoremove && apt-get -y clean && apt-get -y autoclean && \
       rm -rf /var/lib/apt/lists/*
 
