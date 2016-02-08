@@ -57,7 +57,7 @@ else
 fi;
 
 # Run git in docker if all prerequisites are met.
-docker run -it \
+docker run -it --rm \
   -e "GIT_COMMITTER_NAME=$GIT_NAME" \
   -e "GIT_AUTHOR_NAME=$GIT_NAME" \
   -e "GIT_COMMITTER_EMAIL=$GIT_EMAIL" \
