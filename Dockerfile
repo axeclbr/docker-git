@@ -1,7 +1,9 @@
 FROM alpine:3.3
 MAINTAINER trotro
 
-RUN apk update && apk add git
+RUN apk update \
+	&& apk add git \
+	&& rm -rf /var/cache/apk/*
 
 ENV HOME /root
 
