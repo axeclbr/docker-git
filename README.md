@@ -1,3 +1,5 @@
+[![](https://badge.imagelayers.io/trotro/alpine-git:2.6.4.svg)](https://imagelayers.io/?images=trotro/alpine-git:2.6.4 'Get your own badge on imagelayers.io')
+
 # docker-git
 
 Docker-Container behaving (nearly) like a git-binary.
