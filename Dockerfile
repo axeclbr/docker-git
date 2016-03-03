@@ -1,5 +1,5 @@
 FROM alpine:3.3
-MAINTAINER trotro
+MAINTAINER axeclbr <axeclbr@posteo.de>
 
 RUN apk update \
 	&& apk add git \
