@@ -1,3 +1,5 @@
+[![](https://badge.imagelayers.io/axeclbr/git:latest.svg)](https://imagelayers.io/?images=axeclbr/git:latest 'Get your own badge on imagelayers.io')
+
 # docker-git
 
 Docker-Container behaving (nearly) like a git-binary.
@@ -13,7 +15,7 @@ The container contains a helper script for convienient usage. Just print it out 
 To check if it works it makes sense to just ask for the git version by typing:
 
     $ dgit --version
-    git version 2.1.4
+    git version 2.6.4
 
 If you want to use another name just change it from ``dgit`` to your desired name.
 
