@@ -8,7 +8,11 @@ Written for my personal private own use only. Comes without any guarantees.
 
 The container contains a helper script for convienient usage. Just print it out and make it accessible in your ``PATH`` and executable like this.
 
+<<<<<<< HEAD
     $ docker run --entrypoint=/bin/cat trotro/git:2.6.4 /root/git > $HOME/bin/dgit && chmod +x $HOME/bin/dgit
+=======
+    $ docker run --entrypoint=/bin/cat trotro/git /root/git > $HOME/bin/dgit && chmod +x $HOME/bin/dgit
+>>>>>>> fe1326e3b316a3d24c92fd85c95307788dd66dd3
 
 To check if it works it makes sense to just ask for the git version by typing:
 
@@ -25,4 +29,8 @@ The Dockerfile uses "``ENTRYPOINT``" and not "``CMD``" to behave more like the g
 
  To start a Shell inside of the container you have to explicitly override the "``ENTRYPOINT``" instead:
 
+<<<<<<< HEAD
     $ docker run -it --entrypoint /bin/bash trotro/git:2.6.4
+=======
+    $ docker run -it --entrypoint /bin/bash trotro/git
+>>>>>>> fe1326e3b316a3d24c92fd85c95307788dd66dd3
