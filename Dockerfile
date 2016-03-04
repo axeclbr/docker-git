@@ -1,9 +1,8 @@
 FROM alpine:3.3
 MAINTAINER axeclbr <axeclbr@posteo.de>
 
-RUN apk update \
-	&& apk add git \
-	&& rm -rf /var/cache/apk/*
+RUN apk --update add git \
+ && rm -rf /var/cache/apk/*
 
 ENV HOME /root
 
