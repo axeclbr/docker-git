@@ -21,6 +21,6 @@
   export GIT_EMAIL="cool.name@cool-provider.com"
   run ./git --version
   [ $status -eq 0 ]
-  [[ "$output" =~ "git version 2.6.6" ]]
+  [[ "$output" =~ "git version 2.11.1" ]]
 }
 

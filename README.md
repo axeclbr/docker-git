@@ -18,7 +18,7 @@ The container contains a helper script for convienient usage. Just print it out 
 To check if it works it makes sense to just ask for the git version by typing:
 
     $ dgit --version
-    git version 2.6.4
+    git version 2.11.1
 
 If you want to use another name just change it from ``dgit`` to your desired name.
 
@@ -30,4 +30,4 @@ The Dockerfile uses "``ENTRYPOINT``" and not "``CMD``" to behave more like the g
 
  To start a Shell inside of the container you have to explicitly override the "``ENTRYPOINT``" instead:
 
-    $ docker run -it --entrypoint /bin/bash axeclbr/git
+    $ docker run -it --entrypoint /bin/sh axeclbr/git
