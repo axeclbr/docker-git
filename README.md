@@ -1,7 +1,9 @@
+# docker-git
+
+[![Build Status](https://travis-ci.org/axeclbr/docker-git.svg?branch=master)](https://travis-ci.org/axeclbr/docker-git)
+
 [![](https://images.microbadger.com/badges/image/axeclbr/git.svg)](https://microbadger.com/images/axeclbr/git "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/axeclbr/git.svg)](https://microbadger.com/images/axeclbr/git "Get your own version badge on microbadger.com")
-
-# docker-git
 
 Docker-Container behaving (nearly) like a git-binary.
 
