@@ -1,0 +1,7 @@
+README.md
+LICENSE
+.gitignore
+.travis.yml
+test/*
+.git/*
+

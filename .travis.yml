@@ -1,0 +1,9 @@
+language: c
+
+sudo: required
+
+services: docker
+
+before_script: docker build -t axeclbr/docker-git .
+
+script: bin/bats --tap test
