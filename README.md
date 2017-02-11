@@ -1,4 +1,5 @@
-[![](https://badge.imagelayers.io/axeclbr/git:latest.svg)](https://imagelayers.io/?images=axeclbr/git:latest 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/axeclbr/git.svg)](https://microbadger.com/images/axeclbr/git "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/axeclbr/git.svg)](https://microbadger.com/images/axeclbr/git "Get your own version badge on microbadger.com")
 
 # docker-git
 
