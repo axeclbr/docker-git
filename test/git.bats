@@ -19,8 +19,9 @@
 @test "git should be executed, if mandatory env vars are set" {
   export GIT_NAME="Thomas A. Anderson"
   export GIT_EMAIL="cool.name@cool-provider.com"
+  VERSION="$(cat VERSION)"
   run ./git --version
   [ $status -eq 0 ]
-  [[ "$output" =~ "git version 2.11.1" ]]
+  [[ "$output" =~ "git version ${VERSION}" ]]
 }
 
